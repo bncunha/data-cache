@@ -1,6 +1,30 @@
 {
   "name": "data-cache",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A simple service to save and control data in memory",
+  "author": {
+    "name": "Bruno Cunha",
+    "email": "bruno.silva.cunha@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bncunha/data-cache"
+  },
+  "bugs": {
+    "url": "https://github.com/bncunha/data-cache/issues"
+  },
+  "homepage": "https://github.com/bncunha/data-cache",
+  "keywords": [
+    "angular",
+    "service",
+    "angular2",
+    "ngx",
+    "typescript",
+    "javascript",
+    "cache",
+    "memory"
+  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
