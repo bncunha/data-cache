@@ -1,24 +1,64 @@
-# NgDataCache
+# DataCache
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+This is a service to manager data in a cache service
 
-## Code scaffolding
+## Instalation
 
-Run `ng generate component component-name --project ng-data-cache` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-data-cache`.
-> Note: Don't forget to add `--project ng-data-cache` or else it will be added to the default project in your `angular.json` file. 
+```bash
+$ npm install --save ng-data-cache
+```
 
-## Build
+## Quickstart
 
-Run `ng build ng-data-cache` to build the project. The build artifacts will be stored in the `dist/` directory.
+Inject **NgDataCacheService** into a component or service that you want to use.
 
-## Publishing
+```typescript
+import { Injectable } from '@angular/core';
+import { NgDataCacheService } from 'ng-data-cache';
 
-After building your library with `ng build ng-data-cache`, go to the dist folder `cd dist/ng-data-cache` and run `npm publish`.
+@Injectable({
+  providedIn: 'root'
+})
+export class MyService {
 
-## Running unit tests
+  constructor(private cacheService: NgDataCacheService) { }
+}
+```
 
-Run `ng test ng-data-cache` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Save new data in cache
 
-## Further help
+Must pass a key and a data to store.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+this.cacheService.setData('MY_KEY', {name: 'Mario'});
+```
+
+## Get data saved
+
+Must pass the same key when was save.
+
+```typescript
+this.cacheService.foundData('MY_KEY'); // {name: 'Mario'}
+```
+
+## Remove data
+
+Must pass the same key when was save to remove data from cache.
+
+```typescript
+this.cacheService.removeData('MY_KEY');
+```
+
+## Clean all cache
+```typescript
+this.cacheService.cleanCache();
+```
+
+## All functions
+| Function           | Description|
+| -------------- | -------------- |
+| setData(id: string, data: any): void | Save data in cache in given key. |
+| removeData(id: string): void; | Remove data from given key. |
+| foundData(id: string): any; | Return data from given key. |
+| getCache(): DataCache[]; | Return all values stored in cache |
+| cleanCache(): void; | Clean all cache |

@@ -1,6 +1,39 @@
 {
   "name": "ng-data-cache",
-  "version": "0.0.1",
+  "version": "1.0.1",
+  "description": "A simple service to save and control data in memory",
+  "author": {
+    "name": "Bruno Cunha",
+    "email": "bruno.silva.cunha@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bncunha/data-cache"
+  },
+  "bugs": {
+    "url": "https://github.com/bncunha/data-cache/issues"
+  },
+  "homepage": "https://github.com/bncunha/data-cache",
+  "keywords": [
+    "angular",
+    "service",
+    "angular2",
+    "ngx",
+    "typescript",
+    "javascript",
+    "cache",
+    "memory"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
